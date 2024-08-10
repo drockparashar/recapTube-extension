@@ -8,6 +8,10 @@
 - Displays the summary in a clean, user-friendly popup.
 - Simple and intuitive interface.
 
+![Screenshot](images/1.png)
+![Screenshot](images/2.png)
+
+
 ## Installation
 
 ### 1. Clone the Repository
