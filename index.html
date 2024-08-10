@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+
+  <title>RecapTube Extension</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">RecapTube</h1>
+    <div class="form-group">
+      <!-- <label for="videoUrl" class="label">YouTube Video URL</label> -->
+      <input id="videoUrl" type="text" placeholder="Paste YouTube video URL" class="input">
+    </div>
+    <button id="summarizeButton" class="button">Summarize</button>
+    <div id="loading" style="display: none;">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+  </div>
+    <div id="summaryContainer" class="summary" style="display: none;">
+      <h2 class="summary-title">Summary:</h2>
+      <p id="summaryText" class="summary-text"></p>
+    </div>
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>

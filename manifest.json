@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "RecapTube Extension",
+    "version": "1.0",
+    "description": "Summarizes YouTube video transcripts.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  
