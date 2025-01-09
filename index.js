@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Show loading indicator
         loadingIndicator.style.display = 'block';
 
         try {
