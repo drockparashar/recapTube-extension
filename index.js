@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Show loading indicator
         loadingIndicator.style.display = 'block';
 
         try {
@@ -45,14 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to format summary text into HTML
     function formatSummary(summary) {
-        // Convert Markdown to HTML
         return summary
-            .replace(/\*\*\s*(.*?)\s*\*\*/g, '<strong>$1</strong>') // Convert **bold text** to <strong>
-            .replace(/##\s*(.*?)\s*\n/g, '<h2>$1</h2>') // Convert ## Heading to <h2>
-            .replace(/^\s*\*\s*(.*?)\s*$/gm, '<li>$1</li>') // Convert * Bullet Points * to <li>
-            .replace(/(<li>.*<\/li>)(?!<\/ul>)/g, '<ul>$1</ul>') // Wrap <li> items with <ul>
-            .replace(/<\/ul>\s*<ul>/g, '') // Remove extra <ul> tags
-            .replace(/\n\s*\n/g, '<br><br>') // Convert double newlines into <br><br>
-            .replace(/\n/g, '<br>'); // Convert single newlines into <br>
+            .replace(/<h1>(.*?)<\/h1>/g, '<h1 style="color: #2c3e50;">$1</h1>') // Style h1
+            .replace(/<h2>(.*?)<\/h2>/g, '<h2 style="color: #34495e;">$1</h2>') // Style h2
+            .replace(/<strong>(.*?)<\/strong>/g, '<strong style="color: #d35400;">$1</strong>') // Highlight key points
+            .replace(/<li>(.*?)<\/li>/g, '<li style="margin-left: 20px;">$1</li>'); // Indent bullet points
     }
 });
