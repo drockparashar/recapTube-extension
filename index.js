@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Send POST request to backend
-            const response = await fetch('http://localhost:3002/fetch', {
+            const response = await fetch('https://recaptube-extension.onrender.com/fetch', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
