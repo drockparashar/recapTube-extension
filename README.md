@@ -11,8 +11,7 @@
 ![Screenshot](images/1.png)
 ![Screenshot](images/2.png)
 
-
-## Installation
+## Installation and Setup
 
 ### 1. Clone the Repository
 
@@ -23,7 +22,26 @@ git clone https://github.com/yourusername/recaptube-extension.git
 cd recaptube-extension
 ```
 
-### 2. Prepare the Extension Files
+### 2. Install Dependencies
+
+Ensure you have **Node.js** installed, then install the required dependencies:
+
+```bash
+cd server
+npm install
+```
+
+### 3. Start the Backend Server
+
+Run the following command to start the server:
+
+```bash
+node server/index.js
+```
+
+By default, the server will run on **http://localhost:3002**.
+
+### 4. Prepare the Extension Files
 
 Ensure that your project directory contains the following files:
 
@@ -32,7 +50,7 @@ Ensure that your project directory contains the following files:
 - `styles.css`
 - `index.js`
 
-### 3. Load the Extension into Chrome
+### 5. Load the Extension into Chrome
 
 1. **Open Chrome**:
    - Launch Google Chrome or Chromium browser.
@@ -67,6 +85,7 @@ Ensure that your project directory contains the following files:
 
 - **No Summary Appears**: Ensure that the video URL is correct and that the video has a transcript available. The extension fetches summaries based on the available transcript.
 - **Error Messages**: Check the Chrome console for any errors by right-clicking on the extension popup and selecting "Inspect". This will help diagnose any issues.
+- **Server Not Running**: Make sure the server is running on `http://localhost:3000`.
 
 ## Contributing
 
@@ -76,3 +95,4 @@ Feel free to contribute to this project by submitting issues or pull requests. T
 2. Create a new branch for your changes.
 3. Commit your changes and push them to your fork.
 4. Create a pull request with a description of your changes.
+
